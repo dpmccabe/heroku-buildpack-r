@@ -171,7 +171,7 @@ CRAN_MIRROR=${CRAN_MIRROR:-"http://cran.revolutionanalytics.com"}
 BUILD_PACK_VERSION=${BUILD_PACK_VERSION:-latest}
 
 # build up path to binaries on S3
-R_BINARIES="https://mran.blob.core.windows.net/install/mro/${R_VERSION}/microsoft-r-open-${R_VERSION}.tar.gz"
+R_BINARIES="http://${S3_BUCKET}.s3.amazonaws.com/${STACK}/R-${R_VERSION}-binaries-${BUILD_PACK_VERSION}.tar.gz"
 
 # vendor R into the slug
 topic "Vendoring R $R_VERSION for $STACK stack ($BUILD_PACK_VERSION)"
